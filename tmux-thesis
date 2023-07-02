@@ -1,21 +1,5 @@
 #!/usr/bin/env bash
 
-repos_path=~/tmux-sessionizer.local
-
-[ -f $repos_path ] && readarray -t folders <$repos_path
-
-if [[ $# -eq 1 ]]; then
-	selected=$1
-else
-	selected=$(find ${folders[@]} -mindepth 1 -maxdepth 1 -type d | fzf)
-fi
-
-if [[ -z $selected ]]; then
-	exit 0
-fi
-
-echo $selected
-
 start_tmux() {
 	selected=$1
 	selected_name=$(basename "$selected" | tr . _)
@@ -33,4 +17,7 @@ start_tmux() {
 	tmux switch-client -t "$selected_name"
 }
 
-start_tmux $selected
+start_tmux /data/work/hcmus/alacritty
+start_tmux /data/work/hcmus/winit
+start_tmux /data/work/hcmus/client-toolkit
+start_tmux /data/work/hcmus/thesis-tex
