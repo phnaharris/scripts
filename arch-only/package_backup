@@ -12,7 +12,6 @@ package_backup() {
 	done
 
 	delete=(
-		# codelldb-bin
 		alacritty
 		anydesk-bin
 		archlinux-keyring
@@ -22,7 +21,7 @@ package_backup() {
 		brightnessctl
 		bun-bin
 		clang
-		clickhouse
+		codelldb
 		croc
 		cronie
 		delve
@@ -69,9 +68,11 @@ package_backup() {
 		openresolv
 		otf-font-awesome
 		pavucontrol
+		pgadmin4
 		pipewire-pulse
 		pnpm
 		polkit-gnome
+		postgresql
 		postman-bin
 		prettierd
 		pulseaudio
