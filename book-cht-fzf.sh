@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-book=/DATA/PERSONAL/Book
+book=/data/personal/book
 
 [ -f $book ] && readarray -t folders <$book
 
-selected=$(find $book -iname '*.pdf' | fzf)
+selected=$(find $book -iname '*.pdf' | sk)
 selected=$(echo $selected | tr ' ' '\ ')
 
 if [[ -z $selected ]]; then

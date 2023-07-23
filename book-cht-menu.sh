@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-book=/DATA/PERSONAL/Book
+book=/data/personal/book
 
 [ -f $book ] && readarray -t folders <$book
 
@@ -11,5 +11,5 @@ if [[ -z $selected ]]; then
 	exit 0
 fi
 
-zathura $selected
+okular $selected
 exit 0
