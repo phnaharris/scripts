@@ -11,5 +11,5 @@ if [[ -z $selected ]]; then
 	exit 0
 fi
 
-okular $selected
+zathura --fork $selected
 exit 0
