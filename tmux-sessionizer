@@ -7,15 +7,17 @@ repos_path=~/tmux-sessionizer.local
 if [[ $# -eq 1 ]]; then
 	selected=$1
 else
-	selected=$(find ${folders[@]} -mindepth 1 -maxdepth 1 -type d | sk)
+	selected=$(find ${folders[@]} -mindepth 1 -maxdepth 1 -type d | fzf -m)
 fi
-
-if [[ -z $selected ]]; then
-	exit 0
-fi
-
-echo $selected
 
 source /data/repos/phnaharris-machos/scripts/start-tmux.sh
 
-start_tmux $selected
+for selection in $selected; do
+	if [[ -z $selection ]]; then
+		continue
+	fi
+
+	echo $selection
+
+	start_tmux $selection
+done
