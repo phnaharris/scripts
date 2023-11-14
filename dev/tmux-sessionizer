@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 repos_path=~/tmux-sessionizer.local
-
 [ -f $repos_path ] && readarray -t folders <$repos_path
 
 if [[ $# -eq 1 ]]; then
@@ -10,7 +9,11 @@ else
 	selected=$(find ${folders[@]} -mindepth 1 -maxdepth 1 -type d | fzf -m)
 fi
 
-source /data/repos/phnaharris-machos/scripts/start-tmux.sh
+parent_path=$(
+	cd "$(dirname "${BASH_SOURCE[0]}")"
+	pwd -P
+)
+source $parent_path/start-tmux.sh
 
 for selection in $selected; do
 	if [[ -z $selection ]]; then

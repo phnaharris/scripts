@@ -1,8 +1,13 @@
 #!/bin/bash
 
-location="/data/repos/phnaharris-machos/scripts/arch-only/packages/program-$(date +%s).list"
+parent=$(
+	cd "$(dirname "${BASH_SOURCE[0]}")"
+	pwd -P
+)
+filename="program-$(date +%s).list"
+location="$parent/$filename"
 
-package_backup() {
+pkgdump() {
 	touch $location
 	all_packages=($(pacman -Qqe))
 	base_devel_packages=($(pacman -Sg base-devel | cut -f 2 -d " "))
@@ -121,4 +126,6 @@ package_backup() {
 	printf "%s\n" "${all_packages[@]}" >$location
 }
 
-package_backup
+pkgdump
+find $parent -type f -name '*.list' ! -name "$filename" -delete
+printf "All package was dump to $location"
