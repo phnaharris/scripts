@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 
-activate="$PWD/$(basename $PWD)/bin/activate"
-[ -f "$activate" ] && source "$activate"
+set VIRTUAL_ENV "$PWD/$(basename $PWD)/bin/activate.fish"
+[ -f "$VIRTUAL_ENV" ] && source "$VIRTUAL_ENV"
