@@ -43,6 +43,7 @@ rustup
 skim
 solaar
 studio-3t
+tesseract-data-vie
 texlive-basic
 texlive-bibtexextra
 texlive-binextra
@@ -69,6 +70,7 @@ ttf-nerd-fonts-symbols-mono
 ttf-noto-nerd
 typst
 ufw
+vi
 vim
 waybar
 wayvnc
