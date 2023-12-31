@@ -1,0 +1,4 @@
+@hourly rclone sync /data/personal/book/ books:
+@hourly rclone sync /data/personal/trading/ trading:
+@daily /data/repos/phnaharris-machos/scripts/utils/pkgdump
+@weekly sudo pacman -Syu --noconfirm && paru -Sua --noconfirm

@@ -47,7 +47,6 @@ pkgdump() {
 		fzf
 		gimp
 		git
-		gnome-keyring
 		go
 		google-chrome
 		grimblast-git
@@ -76,7 +75,6 @@ pkgdump() {
 		pgadmin4
 		pipewire-pulse
 		pnpm
-		polkit-gnome
 		postgresql
 		postman-bin
 		prettierd
