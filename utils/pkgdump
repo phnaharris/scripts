@@ -17,105 +17,132 @@ pkgdump() {
 	done
 
 	delete=(
-		alacritty
+		NetworkManager
+		acpid
+		altair
 		anydesk-bin
 		archlinux-keyring
+		avahi-daemon
+		base
+		base-devel
 		blueman
+		bluetooth
 		bolt
 		brave-bin
 		brightnessctl
-		bun-bin
+		checkupdates-with-aur
 		clang
 		codelldb
+		containerd
 		croc
 		cronie
+		cronie
+		cups
 		delve
-		dino
-		discord
+		dnsmasq
+		docker
 		docker
 		dunst
-		elixir
 		eslint_d
+		eza
 		fcitx5
 		fcitx5-configtool
 		fcitx5-gtk
 		fcitx5-qt
 		fcitx5-unikey
 		fd
-		firefox
-		fnm-bin
+		firefox-developer-edition
+		firewalld
+		fish
+		fstrim.timer
 		fzf
+		gcc
+		gdb
 		gimp
 		git
-		go
 		google-chrome
 		grimblast-git
-		grub
 		htop
 		hyprland
 		hyprpaper
 		hyprpicker
 		intel-ucode
+		keybase-bin
+		latexindent
+		libvirtd
+		linux
+		linux-firmware
+		linux-headers
 		ly
-		mongodb-bin
+		ly
+		man-db
+		mise
 		mongodb-compass
 		nautilus
 		neofetch
 		neovim
+		net-tools
 		network-manager-applet
 		networkmanager
+		ngrok
 		nodejs-commitizen
 		nomacs
-		nvidia-dkms
-		nvidia-settings
+		noto-fonts
+		nvidia
 		obs-studio
 		openresolv
+		openssh
 		otf-font-awesome
-		pavucontrol
-		pgadmin4
+		paru
+		pass
+		pass-otp
+		pgadmin4-py
+		pipewire
 		pipewire-pulse
-		pnpm
-		postgresql
 		postman-bin
 		prettierd
-		pulseaudio
+		proselint
 		python-black
 		qbittorrent
 		qt5-wayland
+		qt6-wayland
+		rclone
 		ripgrep
-		ruby
+		rustup
 		shfmt
-		skypeforlinux-stable-bin
 		slack-desktop-wayland
-		spotify
+		solaar
 		sqlitebrowser
 		stow
-		sublime-text
 		swappy
 		swaylock
-		teamviewer
+		swhkd-bin
 		telegram-desktop
+		texlive-full
 		tidy
 		tlp-rdw
 		tmux
 		tree
 		ttf-jetbrains-mono-nerd
+		ttf-noto-nerd
+		ufw
 		unzip
+		vim
 		virt-manager
-		visual-studio-code-bin
 		vlc
-		waybar-hyprland
+		vscodium
+		waybar
 		wf-recorder
+		wg-quick
 		wget
 		wireguard-tools
 		wl-clipboard
 		wlr-randr
 		wofi
 		xdg-desktop-portal-hyprland
+		xfce-polkit
 		zathura
 		zathura-pdf-mupdf
-		zoom
-		zsh
 	)
 	# ignore stuff I installed when installing arch
 	for del in "${delete[@]}"; do
